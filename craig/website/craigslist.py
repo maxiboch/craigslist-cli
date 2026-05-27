@@ -17,14 +17,13 @@ def fetchPage(query, search_index_bottom, search_index_top):
     temp_array = []
 
     
+    section = getattr(config, 'section', 'sss')
     if config.max_price != 0 and config.min_price != 0:
-        #url = f"https://{location3}.craigslist.org/search/sss?max_price={config.max_price}&min_price={config.min_price}&query={config.query}#search=1~gallery~{config.page_number}~0"
-        url = f"{config.city_url}/search/sss?max_price={config.max_price}&min_price={config.min_price}&query={config.query}#search=1~gallery~{config.page_number}~0"
-        response = requests.get(url)
+        url = f"{config.city_url}/search/{section}?max_price={config.max_price}&min_price={config.min_price}&query={config.query}#search=1~gallery~{config.page_number}~0"
+        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     else:
-        #url = f"https://{location3}.craigslist.org/search/sss?query={config.query}#search=1~gallery~{config.page_number}~0"
-        url = f"{config.city_url}/search/sss?query={config.query}#search=1~gallery~{config.page_number}~0"
-        response = requests.get(url)
+        url = f"{config.city_url}/search/{section}?query={config.query}#search=1~gallery~{config.page_number}~0"
+        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
 
     
     html = response.content
@@ -40,9 +39,11 @@ def fetchPage(query, search_index_bottom, search_index_top):
             listing = listings[x]
             title = listing.find('div', class_='title').text
             href = listing.find('a')['href']
-            price = listing.find('div', class_='price').text
-            print(listing.find('div', class_='location').text.strip())
-            location = listing.find('div', class_='location').text.strip()
+            price_el = listing.find('div', class_='price')
+            price = price_el.text if price_el else ''
+            loc_el = listing.find('div', class_='location')
+            location = loc_el.text.strip() if loc_el else ''
+            print(location)
 
             # if location
             new_listing = [

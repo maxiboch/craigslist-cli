@@ -2,28 +2,1081 @@
     [
         {
             "index": 0,
-            "title": "Acer Nitro5 Gaming Laptop, 9th Gen Intel Core i5-9300H, GTX 1650, 15.6 IPS 144 m",
-            "href": "https://portland.craigslist.org/wsc/sys/d/portland-acer-nitro5-gaming-laptop-9th/7770120734.html",
-            "price": "$300",
-            "location": "Portland"
+            "title": "West Hartford Center apartment",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-west-hartford-center/7928464838.html",
+            "price": "$1,900",
+            "location": "West Hartford"
         }
     ],
     [
         {
             "index": 1,
-            "title": "Predator 17 Gaming Laptop",
-            "href": "https://portland.craigslist.org/clc/sys/d/sandy-predator-17-gaming-laptop/7764090061.html",
-            "price": "$500",
-            "location": "Sandy"
+            "title": "Whispering Pines!!!",
+            "href": "https://hartford.craigslist.org/apa/d/avon-whispering-pines/7932527036.html",
+            "price": "$2,300",
+            "location": "Avon"
         }
     ],
     [
         {
             "index": 2,
-            "title": "Hewlett-Packard laptop docking station",
-            "href": "https://portland.craigslist.org/mlt/sys/d/portland-hewlett-packard-laptop-docking/7766503963.html",
-            "price": "$10",
-            "location": "SW"
+            "title": "423 Stanley Street 1st Floor",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-423-stanley-street-1st-floor/7932443312.html",
+            "price": "$2,300",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 3,
+            "title": "Family friendly 4 bedroom Apartment",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-family-friendly-bedroom/7932441342.html",
+            "price": "$2,100",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 4,
+            "title": "NEWLY RENOVATED 3 BEDROOM APARTMENT \u2013 1ST FLOOR 36 Lincoln St, Hartfor",
+            "href": "https://hartford.craigslist.org/apa/d/hartford-newly-renovated-bedroom/7932395433.html",
+            "price": "$2,000",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 5,
+            "title": "2/BD 1/BA, in Branford CT, Laundry Suites",
+            "href": "https://hartford.craigslist.org/apa/d/branford-bd-ba-in-branford-ct-laundry/7932314477.html",
+            "price": "$1,843",
+            "location": "115 S Montowese St, Branford, CT"
+        }
+    ],
+    [
+        {
+            "index": 6,
+            "title": "Surface Parking, New Community, Professionally Managed",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-surface-parking-new/7932305631.html",
+            "price": "$2,204",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 7,
+            "title": "This is a spacious 1st floor unit walking distance to Blue Black Squar",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-this-is-spacious-1st/7932194012.html",
+            "price": "$2,500",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 8,
+            "title": "Studio Suite Available",
+            "href": "https://hartford.craigslist.org/apa/d/farmington-studio-suite-available/7932092230.html",
+            "price": "$3,000",
+            "location": "Farmington"
+        }
+    ],
+    [
+        {
+            "index": 9,
+            "title": "Fitness Center, Game Room, Spacious Layout, Historic Made NEW",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-fitness-center-game-room/7932075555.html",
+            "price": "$1,832",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 10,
+            "title": "OPEN HOUSE! Split Level Available! Loft! 1 and 1/2 baths! FREE Heat!",
+            "href": "https://hartford.craigslist.org/apa/d/ellington-open-house-split-level/7930926669.html",
+            "price": "$2,100",
+            "location": "ELLINGTON"
+        }
+    ],
+    [
+        {
+            "index": 11,
+            "title": "OPEN HOUSE!Spring Sale! $99 Security Deposit!",
+            "href": "https://hartford.craigslist.org/apa/d/ellington-open-housespring-sale-99/7932053920.html",
+            "price": "$1,800",
+            "location": "ELLINGTON"
+        }
+    ],
+    [
+        {
+            "index": 12,
+            "title": "UTILS Included! 2 bed, 1 bath Stafford CT",
+            "href": "https://hartford.craigslist.org/apa/d/stafford-utils-included-bed-bath/7926796945.html",
+            "price": "$1,800",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 13,
+            "title": "163 Oakland Ave 1st",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-163-oakland-ave-1st/7931966129.html",
+            "price": "$2,100",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 14,
+            "title": "NEWINGTON ESTATES -  2 bedroom Apartment for Rent - Heat/HW INCLUDED",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-newington-estates-bedroom/7931063707.html",
+            "price": "$1,875",
+            "location": "21 Hartford Avenue"
+        }
+    ],
+    [
+        {
+            "index": 15,
+            "title": "BEAUTIFUL HOUSE TO RENT FOR A YEAR",
+            "href": "https://hartford.craigslist.org/apa/d/avon-beautiful-house-to-rent-for-year/7930244684.html",
+            "price": "$3,900",
+            "location": "Avon"
+        }
+    ],
+    [
+        {
+            "index": 16,
+            "title": "Central Air Conditioning, Large Closets, On-Site Maintenance",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-central-air-conditioning/7928301733.html",
+            "price": "$2,665",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 17,
+            "title": "Large Closets, Patio/Balcony, On-Site Management",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-large-closets-patio-balcony/7930771452.html",
+            "price": "$2,735",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 18,
+            "title": "Large Closets, Fitness Center with Free Weights, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-large-closets-fitness-center/7926920685.html",
+            "price": "$2,210",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 19,
+            "title": "Controlled Access/Gated, Clubhouse, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-controlled-access-gated/7930804572.html",
+            "price": "$2,280",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 20,
+            "title": "Controlled Access/Gated, Large Closets, On-Site Maintenance",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-controlled-access-gated/7927873626.html",
+            "price": "$2,610",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 21,
+            "title": "Fully Equipped Kitchen, Controlled Access/Gated, Carport",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-fully-equipped-kitchen/7931469569.html",
+            "price": "$2,650",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 22,
+            "title": "Central Air Conditioning, Fully Equipped Kitchen, Patio/Balcony",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-central-air-conditioning/7928327866.html",
+            "price": "$2,915",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 23,
+            "title": "Renovated and Modern, Landscaped Courtyards, Cats and Dogs Welcome",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-renovated-and-modern/7931463934.html",
+            "price": "$2,204",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 24,
+            "title": "Controlled Access/Gated, Washer/Dryer, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-controlled-access-gated/7929893184.html",
+            "price": "$2,990",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 25,
+            "title": "Washer/Dryer in your apartment, Nearby Hiking Trails, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-washer-dryer-in-your-apartment/7930734345.html",
+            "price": "$2,455",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 26,
+            "title": "Pool, Fitness Center with Free Weights, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-pool-fitness-center-with/7931414957.html",
+            "price": "$2,650",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 27,
+            "title": "Clubhouse, 24 Hour Emergency Maintenance, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-clubhouse-24-hour-emergency/7931391649.html",
+            "price": "$2,010",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 28,
+            "title": "Large Closets, On-Site Management, Pool",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-large-closets-on-site/7926165609.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 29,
+            "title": "Large Closets, Fully Equipped Kitchen, On-Site Management",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-large-closets-fully-equipped/7931383323.html",
+            "price": "$2,900",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 30,
+            "title": "Modern 2BR Townhouse in Farmington | 2.5 Baths | $2550/mo | Available",
+            "href": "https://hartford.craigslist.org/apa/d/plainville-modern-2br-townhouse-in/7931323053.html",
+            "price": "$2,550",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 31,
+            "title": "Farmington Retail Space",
+            "href": "https://hartford.craigslist.org/apa/d/farmington-farmington-retail-space/7929773844.html",
+            "price": "$3,902",
+            "location": "Farmington"
+        }
+    ],
+    [
+        {
+            "index": 32,
+            "title": "Beautiful spacious 3 bedrooms with a sunroom and lots of open space!!",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-beautiful-spacious-bedrooms/7931270217.html",
+            "price": "$2,150",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 33,
+            "title": "1320 Cromwell Hills Drive",
+            "href": "https://hartford.craigslist.org/apa/d/cromwell-1320-cromwell-hills-drive/7931267005.html",
+            "price": "$1,900",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 34,
+            "title": "Historic and Affordable, Pets Welcome, Surface Parking",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-historic-and-affordable/7931198685.html",
+            "price": "$1,832",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 35,
+            "title": "$2,723 / 1br - $2,723.00 / 1br - Great Monthly Rates! (Meriden) (Merid",
+            "href": "https://hartford.craigslist.org/apa/d/meriden-br-br-great-monthly-rates/7931151912.html",
+            "price": "$2,723",
+            "location": "Meriden"
+        }
+    ],
+    [
+        {
+            "index": 36,
+            "title": "Bushnell Tower one bedroom in downtown Hartford",
+            "href": "https://hartford.craigslist.org/apa/d/hartford-bushnell-tower-one-bedroom-in/7931149040.html",
+            "price": "$1,800",
+            "location": "Hartford"
+        }
+    ],
+    [
+        {
+            "index": 37,
+            "title": "Renovated Historic Landmark, Work Stations in Lounge, Game Room",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-renovated-historic-landmark/7930992303.html",
+            "price": "$2,551",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 38,
+            "title": "HOUSE FOR RENT",
+            "href": "https://hartford.craigslist.org/apa/d/wolcott-house-for-rent/7930964168.html",
+            "price": "$1,800",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 39,
+            "title": "3 bedroom apartment in West Hartford Center!",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-bedroom-apartment-in-west/7930954420.html",
+            "price": "$2,400",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 40,
+            "title": "4 BEDROOM 1BATH or 3 bedroom",
+            "href": "https://hartford.craigslist.org/apa/d/hartford-bedroom-1bath-or-bedroom/7926310773.html",
+            "price": "$2,400",
+            "location": "Hartford"
+        }
+    ],
+    [
+        {
+            "index": 41,
+            "title": "Awesome 3 BR apartment!!",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-awesome-br-apartment/7926303369.html",
+            "price": "$1,800",
+            "location": "West Hartford"
+        }
+    ],
+    [
+        {
+            "index": 42,
+            "title": "Historic and Affordable, Pets Welcome, Surface Parking",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-historic-and-affordable/7930805774.html",
+            "price": "$1,832",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 43,
+            "title": "Fitness Center, Game Room, Spacious Layout, Historic Made NEW",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-fitness-center-game-room/7930799176.html",
+            "price": "$1,832",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 44,
+            "title": "Charming single unit on Grand St, Middletown - $1750/mo - Available 3/",
+            "href": "https://hartford.craigslist.org/apa/d/middletown-charming-single-unit-on/7930788345.html",
+            "price": "$1,800",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 45,
+            "title": "Carport, Washer/Dryer, Fitness Center with Free Weights",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-carport-washer-dryer-fitness/7926141191.html",
+            "price": "$2,195",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 46,
+            "title": "Surface Parking, New Community, Professionally Managed",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-surface-parking-new/7930751962.html",
+            "price": "$2,204",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 47,
+            "title": "Walk-in Closets (select units), Nearby Hiking Trails, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-walk-in-closets-select-units/7929942202.html",
+            "price": "$2,435",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 48,
+            "title": "Pool, On-Site Maintenance, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-pool-on-site-maintenance/7925937593.html",
+            "price": "$2,525",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 49,
+            "title": "Bathrooms with Full-Size Tubs, Private Balcony or Patio, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-bathrooms-with-full-size-tubs/7930706321.html",
+            "price": "$1,910",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 50,
+            "title": "CCSU House for rent",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-ccsu-house-for-rent/7930705294.html",
+            "price": "$2,500",
+            "location": "CCSU New Britain"
+        }
+    ],
+    [
+        {
+            "index": 51,
+            "title": "Private Balcony or Patio, Pet Stations, Nearby Hiking Trails",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-private-balcony-or-patio-pet/7930695522.html",
+            "price": "$1,910",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 52,
+            "title": "On-Site Management, Washer/Dryer, Garage Parking Available",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-on-site-management-washer/7926009507.html",
+            "price": "$2,195",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 53,
+            "title": "On-Site Management, Large Closets, Washer/Dryer",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-on-site-management-large/7930689967.html",
+            "price": "$2,990",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 54,
+            "title": "42 N. Main St. ,  #48",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-42-main-st-48/7930627980.html",
+            "price": "$2,000",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 55,
+            "title": "38 Great Meadow Lane",
+            "href": "https://hartford.craigslist.org/apa/d/unionville-38-great-meadow-lane/7930592933.html",
+            "price": "$2,300",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 56,
+            "title": "Wellness Office, Community Room, On-Site Management",
+            "href": "https://hartford.craigslist.org/apa/d/branford-wellness-office-community-room/7930582534.html",
+            "price": "$1,843",
+            "location": "115 S Montowese St, Branford, CT"
+        }
+    ],
+    [
+        {
+            "index": 57,
+            "title": "$2,723.00 / 1br - Great Monthly Rates! (Meriden)",
+            "href": "https://hartford.craigslist.org/apa/d/meriden-br-great-monthly-rates-meriden/7930468745.html",
+            "price": "$2,723",
+            "location": "Meriden"
+        }
+    ],
+    [
+        {
+            "index": 58,
+            "title": "Glastonbury, 2bed,1bath,$1,895",
+            "href": "https://hartford.craigslist.org/apa/d/glastonbury-glastonbury-2bed1bath1895/7927169872.html",
+            "price": "$1,895",
+            "location": "Glastonbury"
+        }
+    ],
+    [
+        {
+            "index": 59,
+            "title": "2 Bedroom Townhouse with finished basement",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-bedroom-townhouse-with/7930135132.html",
+            "price": "$1,975",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 60,
+            "title": "Spacious 3 Bed 1 Bath",
+            "href": "https://hartford.craigslist.org/apa/d/manchester-spacious-bed-bath/7925387472.html",
+            "price": "$2,295",
+            "location": "Manchester"
+        }
+    ],
+    [
+        {
+            "index": 61,
+            "title": "**SRO \u2013 Single Room Occupancy in the Heart of West Hartford**",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-sro-single-room-occupancy/7930022967.html",
+            "price": "$2,750",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 62,
+            "title": "2 bed 1 bath downtown Stafford",
+            "href": "https://hartford.craigslist.org/apa/d/stafford-bed-bath-downtown-stafford/7930003710.html",
+            "price": "$1,800",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 63,
+            "title": "**Beautiful 3-Family Home \u2013 West End of Hartford**",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-beautiful-family-home/7930003655.html",
+            "price": "$3,200",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 64,
+            "title": "Pet Stations, 24 Hour Emergency Maintenance, Community Room",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-pet-stations-24-hour-emergency/7928380239.html",
+            "price": "$2,020",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 65,
+            "title": "West end Hartford 2 bedroom",
+            "href": "https://hartford.craigslist.org/apa/d/west-hartford-west-end-hartford-bedroom/7929897483.html",
+            "price": "$2,000",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 66,
+            "title": "Bathrooms with Full-Size Tubs, Flexible Lease Terms, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-bathrooms-with-full-size-tubs/7929893791.html",
+            "price": "$2,060",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 67,
+            "title": "Updated 2 Bed 1 Bath Unit in Vernon, CT - Available 6/1/2026",
+            "href": "https://hartford.craigslist.org/apa/d/vernon-rockville-updated-bed-bath-unit/7929867079.html",
+            "price": "$1,900",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 68,
+            "title": "Nearby Hiking Trails, Private Balcony or Patio, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-nearby-hiking-trails-private/7929858182.html",
+            "price": "$1,960",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 69,
+            "title": "Fitness Center with Free Weights, Carport, Washer/Dryer",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-fitness-center-with-free/7929842047.html",
+            "price": "$2,990",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 70,
+            "title": "Clubhouse, Central Air Conditioning, Flexible Lease Terms",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-clubhouse-central-air/7929838585.html",
+            "price": "$2,060",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 71,
+            "title": "Controlled Access/Gated, Large Closets, Patio/Balcony",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-controlled-access-gated/7927902277.html",
+            "price": "$2,210",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 72,
+            "title": "Garage Parking Available, Fitness Center with Free Weights, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-garage-parking-available/7928379798.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 73,
+            "title": "Fully Equipped Kitchen, Washer/Dryer, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-fully-equipped-kitchen/7929832328.html",
+            "price": "$2,280",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 74,
+            "title": "2 bedroom 2 bath apartment in Windsor Central",
+            "href": "https://hartford.craigslist.org/apa/d/windsor-bedroom-bath-apartment-in/7925186853.html",
+            "price": "$1,800",
+            "location": "Windsor"
+        }
+    ],
+    [
+        {
+            "index": 75,
+            "title": "On-Site Maintenance, Garage Parking Available, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-on-site-maintenance-garage/7924957929.html",
+            "price": "$2,195",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 76,
+            "title": "On-Site Management, Pool, Patio/Balcony",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-on-site-management-pool/7928925254.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 77,
+            "title": "Patio/Balcony, On-Site Management, Central Air Conditioning",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-patio-balcony-on-site/7928948453.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 78,
+            "title": "Clubhouse, On-Site Management, Patio/Balcony",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-clubhouse-on-site-management/7925382611.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 79,
+            "title": "Branford CT, 2/bd, Fitness Center",
+            "href": "https://hartford.craigslist.org/apa/d/branford-branford-ct-bd-fitness-center/7929720197.html",
+            "price": "$1,843",
+            "location": "115 S Montowese St, Branford, CT"
+        }
+    ],
+    [
+        {
+            "index": 80,
+            "title": "Nearby Hiking Trails, Pet Stations, Community Room",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-nearby-hiking-trails-pet/7928971946.html",
+            "price": "$2,435",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 81,
+            "title": "24 Hour Emergency Maintenance, Community Room, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-24-hour-emergency-maintenance/7929720408.html",
+            "price": "$2,435",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 82,
+            "title": "Central Air Conditioning, Controlled Access/Gated, Carport",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-central-air-conditioning/7928965461.html",
+            "price": "$2,915",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 83,
+            "title": "On-Site Management, Clubhouse, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-on-site-management-clubhouse/7929702580.html",
+            "price": "$2,735",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 84,
+            "title": "Pet Stations, Scenic Wooded Views (select units), Flexible Rent",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-pet-stations-scenic-wooded/7929691675.html",
+            "price": "$2,060",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 85,
+            "title": "On-Site Management, Patio/Balcony, Fully Equipped Kitchen",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-on-site-management-patio/7924915426.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 86,
+            "title": "Central Air Conditioning, Clubhouse, Controlled Access/Gated",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-central-air-conditioning/7929666153.html",
+            "price": "$2,735",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 87,
+            "title": "Controlled Access/Gated, On-Site Maintenance, Patio/Balcony",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-controlled-access-gated-on/7925364526.html",
+            "price": "$2,175",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 88,
+            "title": "Central Air Conditioning, Pool, Controlled Access/Gated",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-central-air-conditioning/7926245732.html",
+            "price": "$2,195",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 89,
+            "title": "Nearby Hiking Trails, Clubhouse, Flexible Rent",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-nearby-hiking-trails-clubhouse/7929630872.html",
+            "price": "$2,535",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 90,
+            "title": "Walk-in Closets (select units), Flexible Lease Terms, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-walk-in-closets-select-units/7929612276.html",
+            "price": "$2,435",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 91,
+            "title": "Walk-in Closets (select units), Flexible Rent, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-walk-in-closets-select-units/7929035612.html",
+            "price": "$2,535",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 92,
+            "title": "Online Maintenance Requests, Patio/Balcony, Pet Friendly Community",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-online-maintenance-requests/7929609446.html",
+            "price": "$1,800",
+            "location": "51 Hopmeadow St, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 93,
+            "title": "Clubhouse, Fully Equipped Kitchen, Large Closets",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-clubhouse-fully-equipped/7929607165.html",
+            "price": "$2,990",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 94,
+            "title": "Washer/Dryer, Fully Equipped Kitchen, Patio/Balcony",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-washer-dryer-fully-equipped/7926814038.html",
+            "price": "$2,610",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 95,
+            "title": "Spacious 4 bdrm apartment in Hartford Upper Albany",
+            "href": "https://hartford.craigslist.org/apa/d/hartford-spacious-bdrm-apartment-in/7929587827.html",
+            "price": "$1,800",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 96,
+            "title": "Renovated Historic Landmark, Work Stations in Lounge, Game Room",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-renovated-historic-landmark/7929440909.html",
+            "price": "$2,551",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 97,
+            "title": "3 beds and 2 baths",
+            "href": "https://hartford.craigslist.org/apa/d/east-berlin-beds-and-baths/7929415820.html",
+            "price": "$2,450",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 98,
+            "title": "265 Lincoln St Berlin, Ct 06037 unit B",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-265-lincoln-st-berlin-ct/7929330178.html",
+            "price": "$2,650",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 99,
+            "title": "LED Lighting, On-Site Maintenance, Air Conditioner",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-led-lighting-on-site/7928412767.html",
+            "price": "$1,880",
+            "location": "51 Hopmeadow St, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 100,
+            "title": "3 bdrm townhouse in Victorian home.",
+            "href": "https://hartford.craigslist.org/apa/d/bristol-bdrm-townhouse-in-victorian-home/7927395032.html",
+            "price": "$2,150",
+            "location": "BRISTOL"
+        }
+    ],
+    [
+        {
+            "index": 101,
+            "title": "Surface Parking, New Community, Professionally Managed",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-surface-parking-new/7929198439.html",
+            "price": "$2,204",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 102,
+            "title": "Fitness Center, Game Room, Spacious Layout, Historic Made NEW",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-fitness-center-game-room/7928998264.html",
+            "price": "$1,832",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 103,
+            "title": "Central Air Conditioning, Washer/Dryer in your apartment, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-central-air-conditioning/7928934992.html",
+            "price": "$1,960",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 104,
+            "title": "Washer/Dryer in your apartment, Private Balcony or Patio, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-washer-dryer-in-your-apartment/7928924686.html",
+            "price": "$2,535",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 105,
+            "title": "Business Center, Air Conditioner, Mini Walk-in Closets",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-business-center-air/7928927942.html",
+            "price": "$1,800",
+            "location": "51 Hopmeadow St, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 106,
+            "title": "2 bed 1 bath",
+            "href": "https://hartford.craigslist.org/apa/d/stafford-bed-bath/7928920100.html",
+            "price": "$1,850",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 107,
+            "title": "3 bedroom",
+            "href": "https://hartford.craigslist.org/apa/d/manchester-bedroom/7922927636.html",
+            "price": "$2,000",
+            "location": "Manchester"
+        }
+    ],
+    [
+        {
+            "index": 108,
+            "title": "3 BR apt for rent",
+            "href": "https://hartford.craigslist.org/apa/d/manchester-br-apt-for-rent/7923334230.html",
+            "price": "$2,000",
+            "location": "Manchester"
+        }
+    ],
+    [
+        {
+            "index": 109,
+            "title": "3 bedroom apartment for rent",
+            "href": "https://hartford.craigslist.org/apa/d/new-britain-bedroom-apartment-for-rent/7928875005.html",
+            "price": "$1,975",
+            "location": "New Britain"
+        }
+    ],
+    [
+        {
+            "index": 110,
+            "title": "Charming 2 Bed, 1 Bath Unit in Vernon, CT - $1900/mo",
+            "href": "https://hartford.craigslist.org/apa/d/vernon-rockville-charming-bed-bath-unit/7928867877.html",
+            "price": "$1,900",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 111,
+            "title": "Apartment townhouse style",
+            "href": "https://hartford.craigslist.org/apa/d/enfield-apartment-townhouse-style/7928756055.html",
+            "price": "$1,800",
+            "location": "Enfield"
+        }
+    ],
+    [
+        {
+            "index": 112,
+            "title": "Spacious 3 Bed/1 Bath Unit in Hartford, CT - Rent: $2000/mo",
+            "href": "https://hartford.craigslist.org/apa/d/hartford-spacious-bed-bath-unit-in/7928534743.html",
+            "price": "$2,000",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 113,
+            "title": "Community Room, Bathrooms with Full-Size Tubs, Pet Stations",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-community-room-bathrooms-with/7927903162.html",
+            "price": "$2,120",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 114,
+            "title": "Central Air Conditioning, Clubhouse, Bathrooms with Full-Size Tubs",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-central-air-conditioning/7928342901.html",
+            "price": "$2,465",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 115,
+            "title": "Private Balcony or Patio, Pet Stations, Clubhouse",
+            "href": "https://hartford.craigslist.org/apa/d/weatogue-private-balcony-or-patio-pet/7928305296.html",
+            "price": "$2,020",
+            "location": "1 Old Canal Way, Simsbury, CT"
+        }
+    ],
+    [
+        {
+            "index": 116,
+            "title": "Clubhouse, Controlled Access/Gated, On-Site Management",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-clubhouse-controlled-access/7927757939.html",
+            "price": "$2,610",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 117,
+            "title": "Garage Parking Available, Washer/Dryer, On-Site Management",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-garage-parking-available/7926626264.html",
+            "price": "$2,610",
+            "location": "95 Filley St, Bloomfield, CT"
+        }
+    ],
+    [
+        {
+            "index": 118,
+            "title": "Newly Remolded 2-Bedroom Available August 2026!",
+            "href": "https://hartford.craigslist.org/apa/d/storrs-mansfield-newly-remolded-bedroom/7928167822.html",
+            "price": "$2,025",
+            "location": ""
+        }
+    ],
+    [
+        {
+            "index": 119,
+            "title": "Large Closets, Carport, On-Site Maintenance",
+            "href": "https://hartford.craigslist.org/apa/d/bloomfield-large-closets-carport-on/7928155115.html",
+            "price": "$2,915",
+            "location": "95 Filley St, Bloomfield, CT"
         }
     ]
 ]
