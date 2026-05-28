@@ -77,12 +77,44 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
 - Note: ~60-70 listings; good source for no-fee/direct listings
 - Note: No coordinates — geocode from neighborhood name
 
-### 5. OpenIgloo — Brooklyn Listings (lower priority)
-- **URL**: `https://www.openigloo.com/listings` (base page only — filtered URLs need JS)
-- **Method**: Fetch base page, parse listing cards
-- **Filter**: Only Brooklyn borough listings with 2+ beds
-- Extract: address, price, beds/baths, neighborhood, URL
-- Note: Limited data from HTML scrape; JS-heavy site returns less data than other sources
+### 5. OpenIgloo — Brooklyn Listings (PREFERRED over CL for dupes)
+- **URLs** (fetch all — each returns ~18 SSR listings):
+  - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:2|maxPrice:7000`
+  - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:3|maxPrice:7000`
+  - Per-neighborhood pages for deeper coverage:
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:bedford-stuyvesant|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:bushwick|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:crown-heights|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:williamsburg|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:park-slope|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:prospect-heights|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:fort-greene|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:flatbush|bedrooms:2`
+    - `https://www.openigloo.com/listings/borough:brooklyn|nbr:sunset-park|bedrooms:2`
+- **Method**: Fetch HTML, parse Next.js RSC payload from `self.__next_f.push()` calls.
+  Find the largest push payload, decode with `encode().decode('unicode_escape')`,
+  then extract JSON objects containing `fullAddress` field. Each listing has:
+  `fullAddress`, `activeListing.rent`, `numBedrooms`, `numBathrooms`,
+  `neighborhood.name`, `building.lat`, `building.lon`, `verified`,
+  `rentStabilized`, `goodCauseEviction`, `activeListing.publishedDate`
+- **Filter**: 2+ bedrooms, under $7,000, Brooklyn only
+- **Extra data**: rent stabilization, good cause eviction, verified badge, lease terms
+- **Direct**: Mark "unclear" (OpenIgloo doesn't distinguish owner vs broker)
+- Note: ~80 listings across neighborhood pages; no rate limiting issues
+- Note: Provides real lat/lng coordinates — no geocoding needed
+
+### Dedup Priority (when same unit appears on multiple sources)
+When the same apartment appears on multiple sources (matched by location within 30m,
+same bedroom count, price within 10%), **prefer in this order**:
+1. **openigloo** — best data quality (coords, rent stabilization, verified)
+2. **listingsproject** — curated, reliable
+3. **nybits** — no-fee focused
+4. **apartments.com** — structured data
+5. **craigslist** — most volume but rate-limited and higher scam risk
+
+To prefer OpenIgloo: if a new CL listing matches an existing OpenIgloo entry, skip it.
+If a new OpenIgloo listing matches an existing CL entry, replace the CL entry
+(use `update_listing` to change the URL, source, and enriched fields).
 
 ## Neighborhood → Coordinates Lookup
 For sources that don't provide lat/lng, use these centroids:
