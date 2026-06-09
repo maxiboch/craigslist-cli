@@ -15,6 +15,17 @@ user's `craigslist-cli` folder as `rental_map.html`.
 - Price ceiling raised from $7,000 to $9,000 on 2026-06-09.
 - 2026-06-09 cull: removed 478 non-duplex+/SI listings from the Sheet (734 -> 267 active).
 
+
+## Pet Policy + Liveness Sweep (added 2026-06-09)
+**Pet rule (conservative):** Remove a listing ONLY if its page EXPLICITLY says no pets (e.g. "no pets", "no dogs", "sorry no pets", "not pet friendly"). KEEP pet-OK ("cats are ok"/"dogs are ok") AND listings that don't mention pets (unstated). Do not remove on unknown.
+
+**Liveness + pet sweep (run every day, fold into the scrape):** The scraper environment's IP is blocked by Craigslist, and `web_fetch` only accepts URLs already in the chat — so liveness/pet of stored listings CANNOT be checked with web_fetch. Use the **maxi tool browser** (residential IP) instead:
+- Acquire a browser session: `mcp__maxi__t` with `s="🌎🆕 []"`.
+- For each active listing: navigate (`s="🌎🧭 ['<session>','<url>']"`) then evaluate (`s="🌎🧪 ['<session>', 「<js>」]"`) reading `document.body.innerText` for: removed/expired/deleted (CL: "this posting has been deleted/expired", tiny body) and pet signals.
+- Mark dead/expired/off-market AND explicit-no-pets listings removed via the Sheet `remove_listing` endpoint.
+- Release the session at the end (`s="🌎🚮 ['<session>']"`). Run several sessions in parallel for speed.
+- New listings: also check pet policy at scrape time; skip ones that explicitly say no pets.
+
 ## Search Criteria
 - **Focus area**: Brooklyn, NY
 - **Bedrooms**: 2+ BR (prefer 3+)
