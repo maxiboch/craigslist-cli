@@ -99,6 +99,8 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
 - Note: No coordinates — geocode from neighborhood name
 
 ### 5. OpenIgloo — Brooklyn Listings (PREFERRED over CL for dupes)
+> **STATUS (2026-06-09): RE-ACTIVATED.** OpenIgloo is apartments-only (no duplexes/houses) so expect ~0 duplex+ adds; keep it mainly as a rent-stabilization / good-cause / real-address cross-reference. Plain `web_fetch` returns an EMPTY SHELL — you MUST render it with the maxi-tool browser (acquire session, navigate, evaluate `document.body.innerText` + `a[href*="/unit/"]` links which encode the full address). StreetEasy and Zillow were tested 2026-06-09 and HARD-BLOCK the maxi browser ("Access to this page has been denied" / PerimeterX) — do not rely on them.
+
 - **URLs** (fetch all — each returns ~18 SSR listings):
   - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:2|maxPrice:9000`
   - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:3|maxPrice:9000`
