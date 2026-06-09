@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MakeMaxiMove — Rental Map (852 listings)</title>
+    <title>MakeMaxiMove — Rental Map (1037 listings)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -13,7 +13,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #1a1a2e;
@@ -21,12 +21,12 @@
             display: flex;
             height: 100vh;
         }
-        
+
         #map {
             flex: 1;
             min-width: 0;
         }
-        
+
         #sidebar {
             width: 390px;
             overflow-y: auto;
@@ -34,33 +34,33 @@
             border-left: 1px solid #0f3460;
             padding: 12px;
         }
-        
+
         #sidebar h2 {
             color: #e94560;
             margin-bottom: 4px;
             font-size: 1.1em;
         }
-        
+
         .subtitle {
             font-size: 0.75em;
             color: #78909c;
             margin-bottom: 10px;
         }
-        
+
         .filters {
             margin-bottom: 12px;
             padding: 10px;
             background: #0f3460;
             border-radius: 8px;
         }
-        
+
         .filters label {
             display: block;
             margin: 4px 0;
             font-size: 0.85em;
             color: #a0c4ff;
         }
-        
+
         .filters select,
         .filters input[type=range] {
             background: #1a1a2e;
@@ -71,37 +71,37 @@
             width: 100%;
             margin-top: 2px;
         }
-        
+
         .filters .row {
             display: flex;
             gap: 8px;
             align-items: end;
         }
-        
+
         .filters .row>label {
             flex: 1;
         }
-        
+
         .filters .checks {
             display: flex;
             gap: 12px;
             margin-top: 6px;
             flex-wrap: wrap;
         }
-        
+
         .filters .checks label {
             display: inline-flex;
             align-items: center;
             gap: 4px;
             font-size: 0.8em;
         }
-        
+
         #cards {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
-        
+
         .card {
             background: #0f3460;
             border-radius: 8px;
@@ -111,47 +111,47 @@
             border-left: 4px solid #555;
             position: relative;
         }
-        
+
         .card:hover {
             background: #1a3a6e;
             transform: translateX(2px);
         }
-        
+
         .card.direct {
             border-left-color: #00e676;
         }
-        
+
         .card.unclear {
             border-left-color: #ffab40;
         }
-        
+
         .card.broker {
             border-left-color: #78909c;
         }
-        
+
         .card .name {
             font-weight: 600;
             font-size: 0.9em;
             color: #fff;
             padding-right: 50px;
         }
-        
+
         .card .meta {
             font-size: 0.8em;
             color: #90caf9;
             margin-top: 3px;
         }
-        
+
         .card .storage-line {
             font-size: 0.78em;
             color: #ce93d8;
             margin-top: 2px;
         }
-        
+
         .card .tags {
             margin-top: 4px;
         }
-        
+
         .card .tag {
             display: inline-block;
             font-size: 0.7em;
@@ -160,52 +160,52 @@
             margin-right: 4px;
             margin-top: 2px;
         }
-        
+
         .tag-direct {
             background: #1b5e20;
             color: #a5d6a7;
         }
-        
+
         .tag-storage {
             background: #4a148c;
             color: #ce93d8;
         }
-        
+
         .tag-coastal {
             background: #01579b;
             color: #81d4fa;
         }
-        
+
         .tag-si {
             background: #bf360c;
             color: #ffab91;
         }
-        
+
         .tag-li {
             background: #33691e;
             color: #aed581;
         }
-        
+
         .tag-nj {
             background: #e65100;
             color: #ffcc80;
         }
-        
+
         .tag-queens {
             background: #4a148c;
             color: #b39ddb;
         }
-        
+
         .tag-westchester {
             background: #1a237e;
             color: #9fa8da;
         }
-        
+
         .tag-brooklyn {
             background: #880e4f;
             color: #f48fb1;
         }
-        
+
 
         .friendly-badge {
             position: absolute;
@@ -275,14 +275,14 @@
         .weights-reset:hover { color:#e94560; }
 
 
-        
+
         .interest-row {
             display: flex;
             gap: 4px;
             margin-top: 6px;
             align-items: center;
         }
-        
+
         .interest-btn {
             font-size: 0.75em;
             padding: 2px 7px;
@@ -293,35 +293,35 @@
             cursor: pointer;
             transition: all .15s;
         }
-        
+
         .interest-btn:hover {
             border-color: #90caf9;
         }
-        
+
         .interest-btn.active-hot {
             background: #b71c1c;
             color: #fff;
             border-color: #e53935;
         }
-        
+
         .interest-btn.active-interested {
             background: #1b5e20;
             color: #a5d6a7;
             border-color: #2e7d32;
         }
-        
+
         .interest-btn.active-maybe {
             background: #4a4a00;
             color: #fdd835;
             border-color: #f9a825;
         }
-        
+
         .interest-btn.active-pass {
             background: #37474f;
             color: #90a4ae;
             border-color: #546e7a;
         }
-        
+
         .status-select {
             font-size: 0.72em;
             padding: 1px 4px;
@@ -331,7 +331,7 @@
             border: 1px solid #334;
             margin-left: auto;
         }
-        
+
         .notes-input {
             font-size: 0.72em;
             width: 100%;
@@ -342,15 +342,15 @@
             color: #e0e0e0;
             border: 1px solid #334;
         }
-        
+
         .notes-input::placeholder {
             color: #546e7a;
         }
-        
+
         .card.pass-card {
             opacity: 0.4;
         }
-        
+
         .export-btn {
             background: #e94560;
             color: #fff;
@@ -362,11 +362,11 @@
             margin-top: 8px;
             width: 100%;
         }
-        
+
         .export-btn:hover {
             background: #c62848;
         }
-        
+
         .submit-box { background:#111827; border:1px solid #334; border-radius:8px; padding:8px; margin-bottom:10px; }
         .submit-box h4 { color:#90caf9; font-size:0.8em; margin-bottom:5px; }
         .submit-box input { width:100%; padding:5px 8px; border-radius:4px; background:#0a1628; color:#e0e0e0; border:1px solid #334; font-size:0.78em; margin-bottom:4px; }
@@ -385,7 +385,7 @@
             margin-top: 6px;
             flex-wrap: wrap;
         }
-        
+
         .filter-interest label {
             font-size: 0.75em;
             color: #a0c4ff;
@@ -393,14 +393,14 @@
             align-items: center;
             gap: 3px;
         }
-        
+
         .sort-bar {
             display: flex;
             gap: 6px;
             margin-bottom: 8px;
             flex-wrap: wrap;
         }
-        
+
         .sort-btn {
             background: #1a1a2e;
             color: #90caf9;
@@ -410,29 +410,29 @@
             cursor: pointer;
             font-size: 0.75em;
         }
-        
+
         .sort-btn.active {
             background: #e94560;
             color: #fff;
             border-color: #e94560;
         }
-        
+
         #count {
             font-size: 0.8em;
             color: #78909c;
             margin-bottom: 8px;
         }
-        
+
         a.link {
             color: #64b5f6;
             text-decoration: none;
             font-size: 0.8em;
         }
-        
+
         a.link:hover {
             text-decoration: underline;
         }
-        
+
         .legend {
             display: flex;
             gap: 10px;
@@ -440,26 +440,26 @@
             margin: 8px 0;
             font-size: 0.72em;
         }
-        
+
         .legend-item {
             display: flex;
             align-items: center;
             gap: 4px;
         }
-        
+
         .legend-dot {
             width: 10px;
             height: 10px;
             border-radius: 50%;
             border: 1.5px solid #fff;
         }
-        
+
         .friendly-legend {
             margin: 6px 0 10px;
             font-size: 0.72em;
             color: #90caf9;
         }
-        
+
         .friendly-legend span {
             display: inline-block;
             width: 18px;
@@ -479,7 +479,7 @@
     <div id="map"></div>
     <div id="sidebar">
         <h2>Rental Picks</h2>
-        <div class="subtitle">852 listings · Updated Jun 7, 2026</div>
+        <div class="subtitle">1037 listings · Updated Jun 9, 2026</div>
         <div class="legend">
             <div class="legend-item">
                 <div class="legend-dot" style="background:#00e676"></div> Direct</div>
@@ -821,6 +821,191 @@
             { name: "Brooklyn - 2BR house - HOUSE FOR RENT 965 Belmont Ave", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn/7938927928.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-07", property_type: "house", travel_bk: null, travel_ap: null },
             { name: "Greenwood Heights - 2BR duplex - SPACIOUS DUPLEX WINDOWS IN THE LIVING ROOM", price: 3800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn/7938911864.html", lat: 40.656, lng: -73.993, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-07", property_type: "duplex", travel_bk: null, travel_ap: null },
             { name: "Bushwick - 2BR duplex - Bushwick - Huge Duplex - 3 Bathrooms - No ", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn/7938770700.html", lat: 40.6944, lng: -73.9213, bd: "2BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-07", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Canarsie - 3BR apartment - NO FEE 3BR/1.5 BA, Newly Renovated with/ Balcony, spacious r", price: 3400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-no-fee-3br-15-ba-newly/7939498475.html", lat: 40.642, lng: -73.9011, bd: "3BR/1.5Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 3.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Prospect Heights - 2BR apartment - Park Slope North 2br/1ba Washer/dryer Barclays Center Prospe", price: 4795, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-park-slope-north-2br-1ba/7939494649.html", lat: 40.6776, lng: -73.9686, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 4BR apartment - Spacious 4BR/1BA in the Heart of Bushwick", price: 3800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-4br-1ba-in-the-heart/7939489152.html", lat: 40.6944, lng: -73.9213, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ocean Hill - 3BR apartment - 3BR on Eastern Parkway Being Renovated Ready This Week Ocean", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-3br-on-eastern-parkway-being/7939485962.html", lat: 40.679, lng: -73.91, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - Rare 2BR with Private Backyard in Flatbush Updated Kitchen", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-rare-2br-with-private-backyard/7939484265.html", lat: 40.653, lng: -73.9597, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 3BR apartment - Spacious 3BR 2BA in Flatbush with Huge Living Room Close to ", price: 3100, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-3br-2ba-in-flatbush/7939482506.html", lat: 40.653, lng: -73.9597, bd: "3BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - NO FEE Stunning Modern 2BR on High Floor 1 Month Free", price: 4754, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-no-fee-stunning-modern-2br-on/7939473606.html", lat: 40.6694, lng: -73.9422, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Sick Prime Bushwick 3BR/1BA w/ PRIVATE YARD For AUG 1", price: 4299, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sick-prime-bushwick-3br-1ba/7939458818.html", lat: 40.702941, lng: -73.929405, bd: "3BR/1Ba", area: "brooklyn", direct: "no", storage: "Yard, Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - 199 Malcolm X - 3 Bedroom Apartment for Rent with private de", price: 4395, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-199-malcolm-bedroom-apartment/7939456729.html", lat: 40.6782, lng: -73.9442, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - You're gonna wanna jump on this one NOT GONNA LAST For AUG 1", price: 4199, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-youre-gonna-wanna-jump-on-this/7939455726.html", lat: 40.6944, lng: -73.9213, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Bed-Stuy 2BR/2BA w/ HUGE Balcony + Full Living Room AUG 1", price: 3399, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-stuy-2br-2ba-huge-balcony/7939447963.html", lat: 40.6824, lng: -73.9425, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ocean Hill - 2BR apartment - Stunning 2BR with Private Balcony, In-Unit Washer/Dryer & Ro", price: 3300, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stunning-2br-with-private/7939438843.html", lat: 40.679, lng: -73.91, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof, Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 2BR apartment - VERY SPACIOUS NEAR SHOPS CAFES STEPS TO TRAIN PRIME", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-very-spaciousnear-shops-cafes/7939436826.html", lat: 40.659, lng: -73.9544, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Modern Bushwick 3BR/3BA w/ Rooftop + Laundry AUGUST 1", price: 3899, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-modern-bushwick-3br-3ba/7939433177.html", lat: 40.6944, lng: -73.9213, bd: "3BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 3BR apartment - Insane 3 Bed in Ridgewood NO FEE Corner unit Massive rooms", price: 3950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-insane-bed-in-ridgewood-no-fee/7939422252.html", lat: 40.7002, lng: -73.9039, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - Prime Crown Heights 2BR/1BA + Office w/ PRIVATE BALCONY", price: 3999, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-prime-crown-heights-2br-1ba/7939412830.html", lat: 40.6694, lng: -73.9422, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Charming 2BR in prime Bed-Stuy - Private Terrace + Rooftop A", price: 3800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-charming-2br-in-prime-bed-stuy/7939411350.html", lat: 40.6824, lng: -73.9425, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Roof, Balcony", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Sun-drenched 2BR in prime Bed-Stuy - Luxury Building", price: 3200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sun-drenched-2br-in-prime-bed/7939410661.html", lat: 40.6824, lng: -73.9425, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East Williamsburg - 2BR apartment - Charming 2BR in prime East Williamsburg - Prewar", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-charming-2br-in-prime-east/7939409552.html", lat: 40.71, lng: -73.933, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Marine Park - 2BR apartment - 2 bedrooms 1 bath fully renovated marine park", price: 2200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bedrooms-bath-fully-renovated/7939402972.html", lat: 40.61, lng: -73.93, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 3.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Downtown Brooklyn - 2BR apartment - Spacious 2BR Dwtn Brooklyn High Ceilings Laundry & DW Gym El", price: 4595, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-2br-dwtn-brooklyn/7939402902.html", lat: 40.693, lng: -73.9866, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR duplex - DUPLEX GEM 2 BED BACKYARD BASEMENT L TRAIN 7/1", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-duplex-gem-bed-backyard/7939398385.html", lat: 40.690219, lng: -73.907292, bd: "2BR/1.5Ba", area: "brooklyn", direct: "unclear", storage: "Yard, Basement, Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Woodhaven - 2BR apartment - 2 Brs", price: 2500, url: "https://newyork.craigslist.org/brk/apa/d/woodhaven-brs/7939386783.html", lat: 40.69, lng: -73.86, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 3.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bensonhurst - 2BR apartment - Beautiful, Bright & Spacious Apartment, with One Car Parking", price: 2900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-beautiful-bright-spacious/7939386023.html", lat: 40.6017, lng: -73.9937, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Parking", friendly: 3.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 2BR apartment - thoughtfully designed 2 bedroom apartment has a sizable priv", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-thoughtfully-designed-bedroom/7939385102.html", lat: 40.659, lng: -73.9544, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 3BR apartment - 3 Bed / 1 Bath with Convertible Home Office + Outdoor Space ", price: 4300, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-bath-with-convertible-home/7939384299.html", lat: 40.659, lng: -73.9544, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 3BR apartment - STUNNING 3-BEDROOM IN THE HEART OF BEDSTUY", price: 4950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stunning-bedroom-in-the-heart/7939369628.html", lat: 40.6824, lng: -73.9425, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East New York - 2BR apartment - NEW MIDSIZE TWO BED A,C,J TRAIN RENOVATED ELEVATOR NEAR ALL", price: 2050, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-new-midsize-two-bedacj/7939358357.html", lat: 40.666, lng: -73.883, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 3.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - CITYFHEPS OK - RENOVATED - VERY CLEAN", price: 3800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-cityfheps-ok-renovated-very/7939358202.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East Williamsburg - 2BR apartment - E WILLIAMSBURG RENT STABILIZED 2 BED + W/D IN UNIT & BALCONY", price: 3295, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-rent-stabilized/7939352803.html", lat: 40.71, lng: -73.933, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - 3br/1 Bath, Bushwick Apartment", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-3br-bath-bushwick-apartment/7939348809.html", lat: 40.6944, lng: -73.9213, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - A Brooklyn 2-Bed With Comfort Built Right In", price: 2795, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-with-comfort/7939342372.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - A Brooklyn 3-Bed With the Right Everyday Comforts", price: 3595, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-with-the-right/7939342343.html", lat: 40.6782, lng: -73.9442, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - A Brooklyn 2-Bed With All the Right Everyday Upgrades", price: 2995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-with-all-the/7939342279.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - A Brooklyn 3-Bed That Covers the Essentials", price: 3195, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-that-covers-the/7939342263.html", lat: 40.6782, lng: -73.9442, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - A Brooklyn 2-Bed That Keeps Things Easy", price: 2995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-that-keeps-things/7939342248.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - A Brooklyn 2-Bed With the Right Everyday Upgrades", price: 2795, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-with-the-right/7939342220.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - A Brooklyn 2-Bed That Knows What People Want", price: 2995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-that-knows-what/7939342173.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - A Brooklyn 2-Bed With the Right Everyday Upgrades", price: 2995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-with-the-right/7939342145.html", lat: 40.6782, lng: -73.9442, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - A Brooklyn 3-Bed That Keeps It Comfortable and Clean", price: 3195, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brooklyn-bed-that-keeps-it/7939342122.html", lat: 40.6782, lng: -73.9442, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Fort Greene - 2BR apartment - Stunning 2 bed 2 bath in Fort Greene Steps from the Park", price: 6000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stunning-bed-bath-in-fort/7939339683.html", lat: 40.6892, lng: -73.9759, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 5BR apartment - Huge 5 Bedroom Apartment with Hardwood Floors & Dishwasher", price: 4995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-huge-bedroom-apartment-with/7939191950.html", lat: 40.7002, lng: -73.9039, bd: "5BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 2BR apartment - Bright Luxury Apartment w/Private Backyard & In-Unit Laundry", price: 5500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-luxury-apartment/7939189135.html", lat: 40.7002, lng: -73.9039, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard, Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 2BR apartment - Spacious Modern 2BR Home with Hardwood Floors & Dishwasher", price: 3089, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-modern-2br-home-with/7939181182.html", lat: 40.7002, lng: -73.9039, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 3BR apartment - Insane 3 Bed in Ridgewood NO FEE Corner unit Massive rooms", price: 3950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-insane-bed-in-ridgewood-no-fee/7939168674.html", lat: 40.7002, lng: -73.9039, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Sun-Filled Apartment with Rooftop Access & Laundry On Site", price: 3999, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sun-filled-apartment-with/7939167762.html", lat: 40.6944, lng: -73.9213, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Sunset Park - 2BR apartment - Industry City area NoBrokerfee", price: 2600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-industrycityareacall/7939090560.html", lat: 40.6454, lng: -73.993, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - MODERN APARTMENT PRIVATE BALCONY GREAT SUNLIGHT AMENITY BUIL", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-modern-apartment-private/7938998583.html", lat: 40.653, lng: -73.9597, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - Furnished 3br, 1ba", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-furnished-3br-1ba/7938869740.html", lat: 40.6782, lng: -73.9442, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Greenpoint - 4BR apartment - WILLYB/GREENPOINT DUPLEX LOFT PENTHOUSE IN FULL AMENITY BUIL", price: 6995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-willyb-greenpoint-duplex-loft/7938855657.html", lat: 40.719702, lng: -73.941637, bd: "4BR/2Ba", area: "brooklyn", direct: "no", storage: "Laundry, Roof, Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR duplex - Unique Duplex Loft 1.5 Baths Massive Bonus Level G Train", price: 3550, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-unique-duplex-loft-15-baths/7938785497.html", lat: 40.6794, lng: -73.9496, bd: "2BR/1.5Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-08", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR brownstone - Historic brownstone with huge backyard", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-historic-brownstone-with-huge/7939583717.html", lat: 40.672016, lng: -73.940847, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "brownstone", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR duplex - ASAP MOVE IN BACKYARD LARGE 3 BED 3.5 BATH DUPLEX", price: 4550, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-asap-move-inbackyard-large-bed/7939622393.html", lat: 40.690752, lng: -73.912269, bd: "3BR/3.5Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 4BR duplex - Fresh Renovated 4BR Duplex w/ Basement & Private Backyard", price: 4748, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-fresh-renovated-4br-duplex/7939612696.html", lat: 40.684001, lng: -73.950299, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Basement, Yard", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR duplex - Massive 3b/2.5 ba Duplex with Private Backyard", price: 5800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-massive-3b-25-ba-duplex-with/7939552901.html", lat: 40.702700, lng: -73.914900, bd: "2BR/2.5Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 3BR duplex - WILLIAMSBURG 3 Bed duplex + Backyard SWEET DEAL", price: 6500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-bed-duplex/7939736755.html", lat: 40.713200, lng: -73.938900, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR duplex - Comfortable 3BR DUPLEX w/Stainless Steel Kitchen", price: 3995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-comfortable-3br-duplex/7939632276.html", lat: 40.691288, lng: -73.916992, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Fort Greene - 3BR brownstone - Amazing Charming Spacious 3BR Brownstone Near Fort Greene P", price: 4499, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-amazing-charming-spacious-3br/7939560112.html", lat: 40.693060, lng: -73.967922, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "brownstone", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 5BR duplex - Bushwick - Huge 3.5 Bedroom Duplex - 3 Bath - Laundry - Gym", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-huge-35-bedroom/7939585012.html", lat: 40.696398, lng: -73.914114, bd: "5BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR duplex - BUSHWICK 3 bed duplex right off of the L train", price: 5800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-bed-duplex-right-off/7939733982.html", lat: 40.702700, lng: -73.914900, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 5BR duplex - FIVE BEDROOM DUPLEX WITH BALCONY AND SUPER HIGH CEILINGS", price: 5900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-five-bedroom-duplex-with/7939704747.html", lat: 40.700600, lng: -73.918000, bd: "5BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Spacious backyard Laundry Roof Right By The L and JMZ", price: 3200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-backyard-laundry-roof/7939600374.html", lat: 40.697816, lng: -73.919642, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard, Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 3BR apartment - Newly renovated Amazing 3BR Back yard All utilities includ", price: 3299, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-newly-renovated-amazing-3br/7939559988.html", lat: 40.677812, lng: -73.938246, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Sheepshead Bay - 3BR apartment - Sheepshead bay 3 bedrooms 1 bath with parking", price: 3600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sheepshead-bay-bedrooms-bath/7939632191.html", lat: 40.583900, lng: -73.953600, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Parking", friendly: 3.5, source: "craigslist", sqft: 1500, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR duplex - Duplex Living w/ Skyline Views & Roof Access", price: 4570, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-duplex-living-skyline-views/7939616768.html", lat: 40.692610, lng: -73.934115, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Roof", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "duplex", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 3BR apartment - THREE BIG BEDROOMS + HUGE BASEMENT + BACKYARD + 3 BATHROOMS", price: 4700, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-three-big-bedrooms-huge/7939705044.html", lat: 40.690700, lng: -73.927400, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Basement, Yard", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 3BR apartment - 3 BED 3 BATH + BASEMENT & Dishwasher", price: 4900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-bath-basement-dishwasher/7939585317.html", lat: 40.692020, lng: -73.930650, bd: "3BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Basement, Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Carroll Gardens - 2BR apartment - Carroll Gardens Spacious 2-Bed 1-Bath / W&D / Great Loca", price: 6000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-carroll-gardens-spacious-bed/7939603878.html", lat: 40.678984, lng: -73.998660, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Garden", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - BEST VALUE 2 BED ROOF YARD LAUNDRY AUGUST 1", price: 3300, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-best-value-bed-roof-yard/7939557573.html", lat: 40.700122, lng: -73.916316, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard, Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - PRIVATE YARD WASHER/DRYER IN-UNIT TWO BEDROOMS TWO FULL BATH", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-private-yard-washer-dryer-in/7939704837.html", lat: 40.690700, lng: -73.927400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard, Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 5BR apartment - 2.5 Br in Flatbush w/ private Backyard", price: 3600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-728a-25-br-in-flatbush-private/7939590761.html", lat: 40.646700, lng: -73.957000, bd: "5BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Bushwick 3 BR w/ Private Yard", price: 4300, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-37-bushwick-br-private-yard/7939582841.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - Crown Heights / PLG - Luxury 2 Bedroom /2 BA - Gym - Parki", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-crown-heights-plg-luxury/7939586978.html", lat: 40.669400, lng: -73.942200, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Parking", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Greenpoint - 2BR apartment - Waterfront Greenpoint Luxury w/ Rooftop Views Gym & Parking", price: 4700, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-waterfront-greenpoint-luxury/7939614764.html", lat: 40.727400, lng: -73.951400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Parking, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Fort Greene - 2BR apartment - Bright 2 Bedroom with Private Backyard & In-Unit W/D", price: 6500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-bedroom-with-private/7939644186.html", lat: 40.689200, lng: -73.975900, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Yard, Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - Spacious Modern 2BR w/Laundry On Site Near Brooklyn College", price: 2850, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-modern-2br-laundry-on/7939644002.html", lat: 40.653000, lng: -73.959700, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - VERY SPACIOUS SUNNY NEAR SHOPS CAFES STEPS TO TRAIN PRIME", price: 2900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-very-spacioussunny-near-shops/7939536820.html", lat: 40.653000, lng: -73.959700, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - Spacious 3 Bedroom by Prospect Park | 1.5 Baths | Laundry Bu", price: 2900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bedroom-by-prospect/7939647204.html", lat: 40.678200, lng: -73.944200, bd: "3BR/1.5Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Greenwood Heights - 2BR apartment - 6th Ave Gem. 2BR. RENOVATED Greenwood sunset PARK SLOP", price: 2950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-6th-ave-gem-2br-renovated/7939716252.html", lat: 40.656000, lng: -73.993000, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 2BR apartment - Spacious Light-Filled Apartment + Clean Modern Kitchen", price: 2995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-light-filled/7939643632.html", lat: 40.659000, lng: -73.954400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 3BR apartment - Stylish 3BR Apartment w/Hardwood Floors & Central A/C", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stylish-3br-apartment-hardwood/7939584894.html", lat: 40.653000, lng: -73.959700, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ocean Hill - 2BR apartment - Spacious Sun-Drenched 2BR in Ocean Hill", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-sun-drenched-2br-in/7939696700.html", lat: 40.678000, lng: -73.910000, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - Newly Renovated Apartment with Central Air & Laundry On Site", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-newly-renovated-apartment-with/7939651020.html", lat: 40.653000, lng: -73.959700, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - Renovated 2 Bed W/D In Unit Near A/C/2/3 Avail. 6.1", price: 3200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-renovated-bed-d-in-unit-near-c/7939581283.html", lat: 40.669400, lng: -73.942200, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Greenwood Heights - 2BR apartment - XXL 2BR. RENOVATED + LAUNDRY Greenwood sunset PARK SLO", price: 3200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-xxl-2br-renovated-laundry/7939715519.html", lat: 40.656000, lng: -73.993000, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Solid space - Great natural light - HUGE bedrooms", price: 3200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-solid-space-great-natural/7939687073.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Weeksville - 3BR apartment - Stylish 3BR Apartment with Stainless Steel Kitchen & Split A", price: 3200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stylish-3br-apartment-with/7939612612.html", lat: 40.672600, lng: -73.930000, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Amazing renovated 2-bedroom 2 bath in prime Bushwick", price: 3499, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-amazing-renovated-bedroom-bath/7939612885.html", lat: 40.694400, lng: -73.921300, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Bushwick / E Williamsburg - Beautiful 3 bedroom - No fee", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-williamsburg/7939584605.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East New York - 3BR apartment - Modern 3 Bedroom Apartment For Cityfheps With Laundry", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-modern-bedroom-apartment-for/7939689643.html", lat: 40.666000, lng: -73.883000, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 3.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 3BR apartment - Spacious 3 Bedroom with In-Unit Laundry & Modern Kitchen", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bedroom-with-in-unit/7939589928.html", lat: 40.682400, lng: -73.942500, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Park Slope - 2BR apartment - Beautiful spacious 2bd railroad style apartment in Park Slop", price: 3600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-beautiful-spacious-2bd/7939562660.html", lat: 40.671000, lng: -73.981200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 3BR apartment - Ridgewood / Bushwick - Beautiful 3 Bedroom Stabilized - Laun", price: 3600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-ridgewood-bushwick-beautiful/7939611495.html", lat: 40.700300, lng: -73.905000, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Beautiful spacious 2BR/1BA renovated apartment", price: 3639, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-beautiful-spacious-2br-1ba/7939613928.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - A very spacious newly renovated 3 bedroom apartment for no f", price: 3695, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-very-spacious-newly-renovated/7939612802.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 3BR apartment - Bedstuy 3 bed/1 bath + Balcony", price: 3700, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bedstuy-bed-bath-balcony/7939737617.html", lat: 40.682400, lng: -73.942500, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Weeksville - 4BR apartment - Stylish 4 Bedroom Apartment with Split A/C & Updated Kitchen", price: 3750, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stylish-bedroom-apartment-with/7939583261.html", lat: 40.672600, lng: -73.930000, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 3BR apartment - Modern 3BR in prime Ridgewood Right off the Myrtle-Wyckoff L", price: 3797, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-modern-3br-in-prime-ridgewood/7939633100.html", lat: 40.700300, lng: -73.905000, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East Flatbush - 4BR apartment - Spacious 4BR Apartment with Hardwood Floors & Central Air", price: 3800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-4br-apartment-with/7939581726.html", lat: 40.649000, lng: -73.930100, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 4BR apartment - Spacious 4 Bedroom 1 Bathroom apartment available in Bushwic", price: 3800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bedroom-bathroom/7939664511.html", lat: 40.694400, lng: -73.921300, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - 3 BED 3 BATH IN BUSHWICK", price: 3900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-bath-in-bushwick/7939583740.html", lat: 40.694400, lng: -73.921300, bd: "3BR/3Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Beautiful 3 bedroom 3 bath apartment with a balcony", price: 3950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-beautiful-bedroom-bath/7939614645.html", lat: 40.694400, lng: -73.921300, bd: "3BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 3BR apartment - Insane 3 Bed in Ridgewood NO FEE Corner unit Massive rooms", price: 3950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-insane-bed-in-ridgewood-no-fee/7939611819.html", lat: 40.700300, lng: -73.905000, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Spacious Bed-Stuy 2 Bed / 1-Bath / Available Now", price: 3967, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bed-stuy-bed-bath/7939556433.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Bright Bushwick / BedStuy Border 3BR w/ W/D in Unit AVAIL 8/", price: 3999, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-bushwick-bedstuy-border/7939582258.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 4BR apartment - Spacious 4BR Home with Ample Closet Space & Equipped Kitchen", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-4br-home-with-ample/7939583067.html", lat: 40.694400, lng: -73.921300, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 4BR apartment - PRIME BUSHWICK 4 BED LOFT NEXT TO THE L & M TRAINS", price: 4195, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-prime-bushwick-bed-loft-next/7939747063.html", lat: 40.694400, lng: -73.921300, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Williamsburg 2br Available Laundry in Building Clean and Sp", price: 4199, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-2br-available/7939667589.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 3BR apartment - CRAZY STEAL 3 BED 3 BATH ROOF LAUNDRY AUGUST 1", price: 4200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-crazy-steal-bed-bath-roof/7939560354.html", lat: 40.682400, lng: -73.942500, bd: "3BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Incredible 2 Bedroom Renovated Loft Avail 6/15", price: 4399, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-incredible-bedroom-renovated/7939563454.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - INCREDIBLE 3 BED 3 BATH W/D PRIME LOCATION 7/1", price: 4400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-incredible-bed-bath-d-prime/7939572252.html", lat: 40.694400, lng: -73.921300, bd: "3BR/3Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - Spacious 4-Bedroom with Open Kitchen & High Ceilings", price: 4495, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bedroom-with-open/7939581974.html", lat: 40.669400, lng: -73.942200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 3BR apartment - Brand-New 3BR/2BA w/ Private Terrace Roof Deck & No Fee", price: 4495, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brand-new-3br-2ba-private/7939612746.html", lat: 40.669400, lng: -73.942200, bd: "3BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Terrace, Roof, Deck", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - 3 Bed | 2 Bath", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-bath-4500/7939710206.html", lat: 40.694400, lng: -73.921300, bd: "3BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Bright Apartment w/Stainless Steel Kitchen & Huge Living Roo", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-apartment-stainless/7939628073.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Bushwick - Huge Luxury 2 Bedroom 2 Bath Gym - W/D Bike room", price: 4500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-huge-luxury-bedroom/7939587935.html", lat: 40.694400, lng: -73.921300, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 4BR apartment - Spacious Bushwick 4BR/2BA w/ Balcony + Rooftop", price: 4599, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bushwick-4br-2ba/7939590325.html", lat: 40.694400, lng: -73.921300, bd: "4BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Balcony, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - Bed-Stuy /Bushwick - Beautiful 3 Bedroom 2 Bath - Laundry -", price: 4600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-stuy-bushwick-beautiful/7939615613.html", lat: 40.694400, lng: -73.921300, bd: "3BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Location Location location spacious 2 bed off Roebling-Roof", price: 4800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-ocation-location-location/7939559274.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 4BR apartment - BIG SUNNY FOUR BED AT MARIA HERNANDEZ LAUNDRY IN-UNIT", price: 4900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-big-sunny-four-bed-at-maria/7939704787.html", lat: 40.694400, lng: -73.921300, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - NO FEE True 3BR/1Bath W/D in unit Central AC Super Bright", price: 4950, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-no-fee-true-3br-1bath-d-in/7939596559.html", lat: 40.678200, lng: -73.944200, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 5BR apartment - Huge 5 Bedroom Apartment with Hardwood Floors & Dishwasher", price: 4995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-huge-bedroom-apartment-with/7939580768.html", lat: 40.700300, lng: -73.905000, bd: "5BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Ridgewood - 5BR apartment - 5BR 2BA RIDGEWOOD BADDIE 2 BLOCKS M TRAIN", price: 4995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-5br-2ba-ridgewood-baddie/7939649280.html", lat: 40.700300, lng: -73.905000, bd: "5BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 4BR apartment - 4BR w/ Private Bathrooms Exposed Brick & High Ceilings", price: 5000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-4br-private-bathrooms-exposed/7939581519.html", lat: 40.682400, lng: -73.942500, bd: "4BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 3BR apartment - NO FEE True 3BR/2Bath W/D in unit Central AC Super Bright", price: 5250, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-no-fee-true-3br-2bath-d-in/7939596434.html", lat: 40.678200, lng: -73.944200, bd: "3BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Rare Brooklyn Gem w/3 Spacious Bedrooms & Huge Outdoor Space", price: 5500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-rare-brooklyn-gem-3-spacious/7939613960.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Prospect Heights - 3BR apartment - Crown heights /Prospect heights Luxury 3 Bedroom 2 BA G", price: 5800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-crown-heights-prospect-heights/7939586693.html", lat: 40.677600, lng: -73.968600, bd: "3BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 5BR apartment - Modern 5BR Apartment w/Private Outdoor Space & Skyline Views", price: 6000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-modern-5br-apartment-private/7939580641.html", lat: 40.694400, lng: -73.921300, bd: "5BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 5BR apartment - Massive 5 Bed | 2.5 Bath | Private Balcony", price: 6000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-massive-bed-25-bath-private/7939730228.html", lat: 40.694400, lng: -73.921300, bd: "5BR/2.5Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - 2 Bedroom available for rent next to all", price: 2400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bedroom-available-for-rent/7939737180.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Bushwick Gem 2BR + Bonus Room", price: 2700, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-gem-2br-bonus-room/7939545737.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - Charming 2 Bed steps to Prospect Park and B.Q Trains", price: 2850, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-charming-bed-steps-to-prospect/7939562753.html", lat: 40.678200, lng: -73.944200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - Brand new apt ready to move in", price: 2855, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-brand-new-apt-ready-to-move-in/7939602918.html", lat: 40.678200, lng: -73.944200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - Charming 2BR in prime Crown Heights - Steps away from St.", price: 2900, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-charming-2br-in-prime-crown/7939583918.html", lat: 40.669400, lng: -73.942200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Bushwick 2 BR with Balcony", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-br-with-balcony/7939582428.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bay Ridge - 2BR apartment - 2 bedrooms with king size bedrooms and washer dryer in unit", price: 3000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bedrooms-with-king-size/7939563251.html", lat: 40.634500, lng: -74.028300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 3.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Gorgeous 2 bedroom apartment beautifuly designed", price: 3100, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-gorgeous-bedroom-apartment/7939613991.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 2BR apartment - Rent Stabilized Near Prospect Park Gym + Roof Deck + Laundry", price: 3150, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-rent-stabilized-near-prospect/7939581445.html", lat: 40.659000, lng: -73.954400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof, Deck", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Bright 2BR Apartment with Separate Living & Hardwood Floors", price: 3249, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-2br-apartment-with/7939652137.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Bushwick Apartment 2 Bed/1.5Bath", price: 3300, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-apartment-bed-15bath/7939569454.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1.5Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - Bright Apartment w/Floor-to-Ceiling Windows & Laundry On Sit", price: 3300, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-apartment-floor-to/7939613657.html", lat: 40.653000, lng: -73.959700, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "South Slope - 2BR apartment - South slope / Greenwood - Beautiful 2 Bedroom - Laundry - Pr", price: 3400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-south-slope-greenwood/7939586252.html", lat: 40.663000, lng: -73.987000, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Deck", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - NO FEE Stunning 2BR Apartment Steps from L Train in Bushwick", price: 3400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-no-fee-stunning-2br-apartment/7939698396.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Flatbush - 2BR apartment - Sunlit 2-Bedroom with Balcony & Luxury Amenities", price: 3400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sunlit-bedroom-with-balcony/7939647543.html", lat: 40.653000, lng: -73.959700, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Balcony", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Bedstuy 2 BR w/ Balcony + Laundry on Site", price: 3400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-272-bedstuy-br-balcony-laundry/7939591022.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Balcony", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Sunny 2 Bedroom w/Rooftop access & Stainless Steel Kitchen", price: 3499, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sunny-bedroom-rooftop-access/7939651920.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 2BR apartment - PLG / Prospect park - Luxury 2 Bed /1 Bath - Gym - Laundry -", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-plg-prospect-park-luxury-bed/7939585868.html", lat: 40.659000, lng: -73.954400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Brooklyn - 2BR apartment - Humongous 2 bed 2 bath minutes from prospect park", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/new-york-humongous-bed-bath-minutes/7939664057.html", lat: 40.678200, lng: -73.944200, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Bright & Modern Apartment with In-Unit Laundry & Central A/C", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bright-modern-apartment-with/7939611338.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Bed-Stuy /Bushwick - Luxury 2 Bedroom - Laundry - Gym - Elev", price: 3500, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-stuy-bushwick-luxury/7939592658.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East Flatbush - 2BR apartment - Luxury 2-Bedroom Featuring Gym Laundry & Roof Deck", price: 3550, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-luxury-bedroom-featuring-gym/7939626960.html", lat: 40.649000, lng: -73.930100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof, Deck", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Wow Williamsburg 2br Available Laundry in Building Good Loc", price: 3599, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-wow-williamsburg-2br-available/7939666882.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "PLG - 2BR apartment - PLG / Prospect park - Luxury 2 Bed /2 Bath - Gym - Laundry -", price: 3600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-plg-prospect-park-luxury-bed/7939585259.html", lat: 40.659000, lng: -73.954400, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Weeksville - 2BR apartment - Beautiful space - large bedrooms - Natural light - Laundry i", price: 3600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-beautiful-space-large-bedrooms/7939672609.html", lat: 40.672600, lng: -73.930000, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - 3 BR in Prime Bushwick", price: 3700, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-br-in-prime-bushwick/7939590644.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - BUSHWICK LOFT 2 BED + W/D IN UNIT - BRAND NEW NEVER LIVED IN", price: 3850, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bushwick-loft-bed-d-in-unit/7939749499.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bed-Stuy - 2BR apartment - Charming 2BR Apartment w/Exposed Brick + Rent Stabilized", price: 3967, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-charming-2br-apartment-exposed/7939652730.html", lat: 40.682400, lng: -73.942500, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - 2 bed available now on Sterling pl", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-bed-available-now-on-sterling/7939630203.html", lat: 40.669400, lng: -73.942200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - 3 BR + Loft in Prime Bushwick", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-br-loft-in-prime-bushwick/7939590805.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 3BR apartment - BUSHWICK 3 BR W/ WASHER DRYER", price: 4000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-575-bushwick-br-washer-dryer/7939588564.html", lat: 40.694400, lng: -73.921300, bd: "3BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - WILLIAMSBURG AFFORDABLE 2 bed/2 bath A DEAL", price: 4150, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-affordable-bed/7939735049.html", lat: 40.708100, lng: -73.957100, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - New Dev-2 bed-washer in unit gym-roof Dekalb L train-M train", price: 4200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-new-dev-bed-washer-in-unitgym/7939557570.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Williamsburg - Luxury 2 Bedroom - Elevator - Laundry - Gym", price: 4200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-luxury-bedroom/7939591561.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry, Roof, Deck", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - WILLIAMSBURG 2 bed/2 bath AMAZING DEAL", price: 4250, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-bed-bath-amazing/7939736890.html", lat: 40.708100, lng: -73.957100, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - True Brooklyn Artist Loft w/ Exposed Beams In-Unit Laundry", price: 4400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-true-brooklyn-artist-loft/7939612774.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Greenpoint - 2BR apartment - 2BR in Brand-New Boutique Building Greenpoint July 1 Move-In", price: 4550, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-2br-in-brand-new-boutique/7939636308.html", lat: 40.727400, lng: -73.951400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Large 2BR E. Williamsburg Laundry & DW Big Rooms kitchen Is", price: 4595, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-large-2br-williamsburg-laundry/7939593139.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Prospect Heights - 2BR apartment - Crown heights /Prospect heights Luxury 2 Bedroom 2 BA G", price: 4600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-crown-heights-prospect-heights/7939589277.html", lat: 40.677600, lng: -73.968600, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Greenpoint - 2BR apartment - Perfect 2 Bed in Amenity Building On Transmitter Park", price: 4699, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-perfect-bed-in-amenity/7939563337.html", lat: 40.727400, lng: -73.951400, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - HIGH CEILINGS IN-UNIT LAUNDRY LARGE LIVING ROOM", price: 4800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-high-ceilings-in-unit-laundry/7939704967.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "East Williamsburg - 2BR apartment - E. WILLIAMSBURG LOFT 2 BED IN AMENITY BUILDING", price: 4895, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-loft-bed-in/7939745452.html", lat: 40.713700, lng: -73.938700, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Gorgeous 2bed/1bath with private terrace in Williamsburg", price: 4995, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-gorgeous-2bed-1bath-with/7939706315.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Terrace", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Crown Heights - 2BR apartment - Sun-drenched 2BR in prime Crown Heights - Luxury Building", price: 5086, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sun-drenched-2br-in-prime/7939653301.html", lat: 40.669400, lng: -73.942200, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Boerum Hill - 2BR apartment - Boerum Hill / Park slope - Luxury 2 Bedroom /2 Bath - Laundr", price: 5200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-boerum-hill-park-slope-luxury/7939592307.html", lat: 40.684800, lng: -73.984400, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Downtown Brooklyn - 2BR apartment - Downtown Brooklyn - Luxury 2 Bedroom / 2 bath - Gym -", price: 5200, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-downtown-brooklyn-luxury/7939587103.html", lat: 40.693000, lng: -73.986600, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Private Roof Deck 2BR w/ Sweeping City Views", price: 5350, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-private-roof-deck-2br-sweeping/7939614113.html", lat: 40.708100, lng: -73.957100, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Roof, Deck", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - 2 WEEKS FREE RENT Net Effective 5175 Gross 5400", price: 5400, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-weeks-free-rent-net-effective/7939707200.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Fort Greene - 2BR apartment - Fort Greene - Luxury 2 bedroom - Gym - Yoga - Elevator - No", price: 5600, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-fort-greene-luxury-bedroom-gym/7939636126.html", lat: 40.689200, lng: -73.975900, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - 3 room 2 FULL bath with large private terrace in a new eleva", price: 5700, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-room-full-bath-with-large/7939612651.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Terrace", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Fort Greene - 2BR apartment - LUXURY AND BRIGHT 2 BED IN FORT GREENE", price: 5800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-luxury-and-bright2-bed-in-fort/7939622308.html", lat: 40.689200, lng: -73.975900, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - stunning 2 bed/2 bath apt in East Williamsburg. Enjoy in-un", price: 5800, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-stunning-bed-bath-apt-in-east/7939614254.html", lat: 40.708100, lng: -73.957100, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Carroll Gardens - 2BR apartment - Beautifully Updated Home w/Luxury Finishes & In-Unit Lau", price: 6000, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-beautifully-updated-home/7939651719.html", lat: 40.679600, lng: -73.999300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.5, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 2BR apartment - Williamsburg 2bed/2bath w/d in unit, doorman, gym", price: 6958, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-williamsburg-2bed-2bath-d-in/7939714442.html", lat: 40.708100, lng: -73.957100, bd: "2BR/2Ba", area: "brooklyn", direct: "unclear", storage: "Laundry", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Williamsburg - 3BR apartment - INSANE 3 BEDROOM/1.5 BATH AVAIL FOR 8/1", price: 4899, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-insane-bedroom-15-bath-avail/7939677718.html", lat: 40.708100, lng: -73.957100, bd: "3BR/1.5Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
+            { name: "Bushwick - 2BR apartment - Sunlit 2BR Apartment w/High Ceilings & Shared Outdoor Space", price: 3150, url: "https://newyork.craigslist.org/brk/apa/d/brooklyn-sunlit-2br-apartment-high/7939627405.html", lat: 40.694400, lng: -73.921300, bd: "2BR/1Ba", area: "brooklyn", direct: "unclear", storage: "", friendly: 4.0, source: "craigslist", sqft: null, status: "active", added_date: "2026-06-09", property_type: "apartment", travel_bk: null, travel_ap: null },
         ];
 
 
@@ -1408,7 +1593,7 @@ async function init() {
     // Create markers
     listings.forEach(l => { l._marker = createMarker(l); });
     // Update subtitle
-    document.querySelector('.subtitle').textContent = `${listings.length} listings | Live from Google Sheet · Updated Jun 7, 2026`;
+    document.querySelector('.subtitle').textContent = `${listings.length} listings | Live from Google Sheet · Updated Jun 9, 2026`;
     // Render
     render();
     // Load reactions and pending submissions
