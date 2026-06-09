@@ -5,11 +5,21 @@ This document describes the daily scraping workflow for maxi's Brooklyn rental s
 The map lives at https://maxiboch.github.io/make-maxi-move/ and the source is in the
 user's `craigslist-cli` folder as `rental_map.html`.
 
+
+## Property-Type Policy (added 2026-06-09)
+**Keep only "at least a duplex":** duplex, brownstone, house, townhouse, small-multi
+(whole-floor-of-house / private-entrance / 2-6 unit). **Plain apartments are excluded.**
+- Daily scrapes should only ADD listings classified as one of the keep-types above.
+- Plain apartment listings should be skipped (do not add to the Sheet).
+- Staten Island is NEVER included (hard rule).
+- Price ceiling raised from $7,000 to $9,000 on 2026-06-09.
+- 2026-06-09 cull: removed 478 non-duplex+/SI listings from the Sheet (734 -> 267 active).
+
 ## Search Criteria
 - **Focus area**: Brooklyn, NY
 - **Bedrooms**: 2+ BR (prefer 3+)
-- **Max price**: $7,000/month
-- **Property types**: Duplexes, houses, brownstones, townhouses (prefer over apartments)
+- **Max price**: $9,000/month
+- **Property types**: ONLY duplexes, houses, brownstones, townhouses, small-multi (whole-floor/private-entrance). Plain apartments are EXCLUDED as of 2026-06-09.
 - **Bonus features**: Basement, yard, garage, storage, parking, laundry
 - **Direct from owner** preferred but not required
 
@@ -23,7 +33,7 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
 ## Sources (in order of priority)
 
 ### 1. Craigslist Brooklyn
-- **URL**: `https://newyork.craigslist.org/search/brk/apa?min_price=2000&max_price=7000&min_bedrooms=2&availabilityMode=0&sale_date=all+dates#search=1~gallery~0~0`
+- **URL**: `https://newyork.craigslist.org/search/brk/apa?min_price=2000&max_price=9000&min_bedrooms=2&availabilityMode=0&sale_date=all+dates#search=1~gallery~0~0`
 - **Method**: Fetch search page, parse titles. Score titles for relevance:
   - +3: "duplex", "house", "brownstone", "townhouse"
   - +2: "basement", "yard", "garden", "garage", "parking", "storage"
@@ -40,7 +50,7 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
 - **Method**: Fetch each page, parse listing cards from HTML
 - **Filter**: Only listings mentioning Brooklyn neighborhoods in the location field
 - **Filter**: Only "Apartments for Rent" type (skip "Rooms for Rent", "Lease Takeover")
-- **Filter**: 2+ bedrooms, under $7,000
+- **Filter**: 2+ bedrooms, under $9,000
 - Extract: title, price, neighborhood, URL, description snippet
 - Note: ListingsProject doesn't provide coordinates — geocode from neighborhood name
 
@@ -60,7 +70,7 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
   - Address and neighborhood (from `.property-address`)
   - Amenity tags: look for Yard, Basement, Garage, Storage, Parking, Laundry, Hardwood
   - Listing URL (from card link)
-- **Filter**: 2+ bedrooms, under $7,000, Brooklyn only
+- **Filter**: 2+ bedrooms, under $9,000, Brooklyn only
 - **Direct**: Mark "yes" for by-owner URLs, "unclear" for duplex URL
 - Note: ~125 listings across by-owner pages; houses/townhomes/duplexes overlap somewhat
 - Note: No coordinates provided — geocode from address/neighborhood
@@ -72,15 +82,15 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
   - 3+ BR: `https://www.nybits.com/search/brooklyn-rentals-3more.html`
 - **Method**: Fetch each page, parse listing rows from HTML
 - **Extract**: title, price, beds, neighborhood, URL, description snippet
-- **Filter**: 2+ bedrooms, under $7,000
+- **Filter**: 2+ bedrooms, under $9,000
 - **Direct**: Most NYBits listings are no-fee/by-owner — mark "yes" unless broker noted
 - Note: ~60-70 listings; good source for no-fee/direct listings
 - Note: No coordinates — geocode from neighborhood name
 
 ### 5. OpenIgloo — Brooklyn Listings (PREFERRED over CL for dupes)
 - **URLs** (fetch all — each returns ~18 SSR listings):
-  - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:2|maxPrice:7000`
-  - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:3|maxPrice:7000`
+  - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:2|maxPrice:9000`
+  - `https://www.openigloo.com/listings/borough:brooklyn|bedrooms:3|maxPrice:9000`
   - Per-neighborhood pages for deeper coverage:
     - `https://www.openigloo.com/listings/borough:brooklyn|nbr:bedford-stuyvesant|bedrooms:2`
     - `https://www.openigloo.com/listings/borough:brooklyn|nbr:bushwick|bedrooms:2`
@@ -97,7 +107,7 @@ This is a SAFETY concern, not a preference. Assign based on neighborhood:
   `fullAddress`, `activeListing.rent`, `numBedrooms`, `numBathrooms`,
   `neighborhood.name`, `building.lat`, `building.lon`, `verified`,
   `rentStabilized`, `goodCauseEviction`, `activeListing.publishedDate`
-- **Filter**: 2+ bedrooms, under $7,000, Brooklyn only
+- **Filter**: 2+ bedrooms, under $9,000, Brooklyn only
 - **Extra data**: rent stabilization, good cause eviction, verified badge, lease terms
 - **Direct**: Mark "unclear" (OpenIgloo doesn't distinguish owner vs broker)
 - Note: ~80 listings across neighborhood pages; no rate limiting issues
